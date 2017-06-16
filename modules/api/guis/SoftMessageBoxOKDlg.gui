@@ -1,0 +1,75 @@
+//--- OBJECT WRITE BEGIN ---
+new GuiControl(SoftMessageBoxOKDlg) {
+   profile = "GuiDefaultProfile";
+   horizSizing = "right";
+   vertSizing = "bottom";
+   position = "0 0";
+   extent = "640 480";
+   minExtent = "8 2";
+   enabled = "1";
+   visible = "0";
+   clipToParent = "1";
+
+   new GuiWindowCtrl(SoftMBOKFrame) {
+      profile = "slipWindowProfile";
+      horizSizing = "center";
+      vertSizing = "center";
+      position = "172 162";
+      extent = "295 156";
+      minExtent = "48 92";
+      enabled = "1";
+      visible = "1";
+      clipToParent = "1";
+      maxLength = "255";
+      resizeWidth = "0";
+      resizeHeight = "0";
+      canMove = "1";
+      canClose = "0";
+      canMinimize = "0";
+      canMaximize = "0";
+      minSize = "50 50";
+      defaultExtent = "295 156";
+
+      new GuiMLTextCtrl(SoftMBOKText) {
+         profile = "slipTextProfile";
+         horizSizing = "center";
+         vertSizing = "bottom";
+         position = "29 46";
+         extent = "236 18";
+         minExtent = "8 8";
+         enabled = "1";
+         visible = "1";
+         clipToParent = "1";
+         lineSpacing = "2";
+         allowColorChars = "0";
+         maxChars = "-1";
+         maxBitmapHeight = "-1";
+         selectable = "1";
+         autoResize = "1";
+      };
+      new GuiBitmapButtonCtrl() {
+         profile = "BlockButtonProfile";
+         horizSizing = "center";
+         vertSizing = "top";
+         position = "102 104";
+         extent = "91 38";
+         minExtent = "8 2";
+         enabled = "1";
+         visible = "1";
+         clipToParent = "1";
+         command = "MessageCallback(SoftMessageBoxOKDlg,SoftMessageBoxOKDlg.callback);";
+         accelerator = "enter";
+         text = "OK";
+         groupNum = "-1";
+         buttonType = "PushButton";
+         bitmap = "~/client/ui/button2";
+         lockAspectRatio = "0";
+         alignLeft = "0";
+         alignTop = "0";
+         overflowImage = "0";
+         mKeepCached = "0";
+         mColor = "90 90 90 90";
+      };
+   };
+};
+//--- OBJECT WRITE END ---

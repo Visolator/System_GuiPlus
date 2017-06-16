@@ -1,0 +1,100 @@
+//--- OBJECT WRITE BEGIN ---
+new GuiControl(SoftMessageBoxYesNoDlg) {
+   profile = "GuiDefaultProfile";
+   horizSizing = "right";
+   vertSizing = "bottom";
+   position = "0 0";
+   extent = "640 480";
+   minExtent = "8 2";
+   enabled = "1";
+   visible = "0";
+   clipToParent = "1";
+
+   new GuiWindowCtrl(SoftMBYesNoFrame) {
+      profile = "slipWindowProfile";
+      horizSizing = "center";
+      vertSizing = "center";
+      position = "170 185";
+      extent = "300 125";
+      minExtent = "48 92";
+      enabled = "1";
+      visible = "1";
+      clipToParent = "1";
+      text = " ";
+      maxLength = "255";
+      resizeWidth = "0";
+      resizeHeight = "0";
+      canMove = "1";
+      canClose = "0";
+      canMinimize = "0";
+      canMaximize = "0";
+      minSize = "50 50";
+      defaultExtent = "300 125";
+
+      new GuiMLTextCtrl(SoftMBYesNoText) {
+         profile = "slipTextProfile";
+         horizSizing = "center";
+         vertSizing = "bottom";
+         position = "32 39";
+         extent = "236 18";
+         minExtent = "8 8";
+         enabled = "1";
+         visible = "1";
+         clipToParent = "1";
+         lineSpacing = "2";
+         allowColorChars = "1";
+         maxChars = "-1";
+         text = " ";
+         maxBitmapHeight = "-1";
+         selectable = "1";
+         autoResize = "1";
+      };
+      new GuiBitmapButtonCtrl() {
+         profile = "BlockButtonProfile";
+         horizSizing = "left";
+         vertSizing = "top";
+         position = "171 73";
+         extent = "91 38";
+         minExtent = "8 2";
+         enabled = "1";
+         visible = "1";
+         clipToParent = "1";
+         command = "MessageCallback(SoftMessageBoxYesNoDlg,SoftMessageBoxYesNoDlg.yesCallback);";
+         accelerator = "return";
+         text = "YES";
+         groupNum = "-1";
+         buttonType = "PushButton";
+         bitmap = "~/client/ui/button2";
+         lockAspectRatio = "0";
+         alignLeft = "0";
+         alignTop = "0";
+         overflowImage = "0";
+         mKeepCached = "0";
+         mColor = "90 90 90 90";
+      };
+      new GuiBitmapButtonCtrl() {
+         profile = "BlockButtonProfile";
+         horizSizing = "left";
+         vertSizing = "top";
+         position = "38 73";
+         extent = "91 38";
+         minExtent = "8 2";
+         enabled = "1";
+         visible = "1";
+         clipToParent = "1";
+         command = "MessageCallback(SoftMessageBoxYesNoDlg,SoftMessageBoxYesNoDlg.noCallback);";
+         accelerator = "escape";
+         text = "NO";
+         groupNum = "-1";
+         buttonType = "PushButton";
+         bitmap = "~/client/ui/button2";
+         lockAspectRatio = "0";
+         alignLeft = "0";
+         alignTop = "0";
+         overflowImage = "0";
+         mKeepCached = "0";
+         mColor = "90 90 90 90";
+      };
+   };
+};
+//--- OBJECT WRITE END ---
